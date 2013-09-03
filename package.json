@@ -25,7 +25,8 @@
     "scarlet": "~0.5.11",
     "commander": "~2.0.0",
     "prompt": "~0.2.11",
-    "scarlet-log4js": "~0.1.4"
+    "scarlet-log4js": "~0.1.4",
+    "init-package-json": "0.0.11"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
