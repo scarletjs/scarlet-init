@@ -26,7 +26,10 @@
     "commander": "~2.0.0",
     "prompt": "~0.2.11",
     "scarlet-log4js": "~0.1.4",
-    "init-package-json": "0.0.11"
+    "init-package-json": "0.0.11",
+    "walk": "~2.2.1",
+    "node-dir": "~0.1.2",
+    "mkdirp": "~0.3.5"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

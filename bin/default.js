@@ -27,6 +27,6 @@ package.directories = {
     "lib": "lib"
 };
 
-package.scripts.test = "mocha --reporter spec tests/*";
-
-console.log(this);
+package.scripts ={
+	tests : "mocha --reporter spec tests/*"
+};
