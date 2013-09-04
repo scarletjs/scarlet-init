@@ -36,8 +36,7 @@ prompt.get(property, function(err, result) {
 
 	var template = "default";
 
-	//logger.info("About to start creating scaffolding...");
-
+	enableVerboseOutput();
 	// a path to a promzard module.  In the event that this file is
 	// not found, one will be provided for you.
 	var initFile = __dirname+'/config/'+template+'.js';
@@ -67,3 +66,16 @@ prompt.get(property, function(err, result) {
 			scarletInit.writeTemplate(data,template);
 	});
 });
+
+var enableVerboseOutput = function(){
+	logger.info("About to start creating scaffolding...");
+
+	scarlet.intercept(scarletInit,'writeTemplate')
+			.on('before',function(invocation){
+				logger.info("Writing "+invocation.args[1]+" template to :"+process.cwd());
+			}).on('after',function(invocation){
+				logger.info("Completed writing "+invocation.args[1]+" template to :"+process.cwd());
+			}).on('error', function(error){
+				logger.error("Error in writing template:"+error.message);
+			})
+}
