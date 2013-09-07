@@ -17,6 +17,7 @@ var logger = scarletLog4js.getLogger("scarlet-init");
 program
 	.version(version)
 	.usage('<indexFileToConvert>')
+	.option('-t, --template [default|lite]', 'Template to use')
 	.parse(process.argv);
 
 prompt.message ='';
@@ -35,6 +36,9 @@ prompt.get(property, function(err, result) {
 		return;
 
 	var template = "default";
+	if(program.template){
+		template = program.template;
+	}
 
 	enableVerboseOutput();
 	// a path to a promzard module.  In the event that this file is

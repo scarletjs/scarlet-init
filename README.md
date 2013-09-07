@@ -23,6 +23,7 @@ Inspired by `grunt-init` and `npm init`
 
 ## Example
 
+Create a new plugin
 ```
 $ cd ~/newPluginDir
 $ scarlet-init
@@ -33,9 +34,19 @@ $ npm test
 //--> tests are setup to work with mocha and run out of the box
 ```
 
+List help 
+```
+$ scarlet-init -h
+//--> lists the help for scarlet-init cli
+```
+
 ## Templates
 
-Currently there is only one default template, more coming soon...
+Currently there are two templates:
+* default - Gives you a scarlet plugin project with: grunt, grunt-contrib-jshint, grunt-release, grunt-contrib-watch, mocha, should,scarlet, lib and test directories, and package.json
+* lite - Gives you a scarlet plugin project with: index.js, package.json
+
+To use a non-default template use the `-t` paramater
 
 ## Credits/Other Frameworks
 
