@@ -4,3 +4,40 @@ scarlet-init
 > Scarlet-init is a scaffolding tool used to automate Scarlet plugin creation.
 
 [![Build Status](https://travis-ci.org/scarletjs/scarlet-init.png?branch=master)](https://travis-ci.org/scarletjs/scarlet-init)
+
+## Installation
+
+Install globally so you can run from the command line
+
+```
+npm install scarlet-init -g
+``
+
+## Purpose/Description
+
+Provides a way to create a project scaffolding for [Scarlet](https://github.com/scarletjs/scarlet) using a cli.
+
+Simply type scarlet-init in the directory you want to create the new plugin, answer the questions...and *boom* project setup with mocha, grunt, and ready for you to start building.
+
+Inspired by `grunt-init` and `npm init`
+
+## Example
+
+```
+$ cd ~/newPluginDir
+$ scarlet-init
+//--> answer all questions for your project; project name, license, description, keywords
+//--> now your directory is setup and good to go
+
+$ npm test
+//--> tests are setup to work with mocha and run out of the box
+```
+
+## Templates
+
+Currently there is only one default template, more coming soon...
+
+## Credits/Other Frameworks
+
+* [init-package-json](https://github.com/isaacs/init-package-json) - Issacs npm to setup an npm
+* [grunt-init](https://github.com/gruntjs/grunt-init) - The plugin scaffolding cli for grunt
