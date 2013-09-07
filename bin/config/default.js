@@ -28,5 +28,5 @@ package.directories = {
 };
 
 package.scripts ={
-	tests : "mocha --reporter spec tests/*"
+	test : "mocha --reporter spec tests/*"
 };

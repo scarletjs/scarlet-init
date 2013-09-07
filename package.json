@@ -29,7 +29,8 @@
     "init-package-json": "0.0.11",
     "walk": "~2.2.1",
     "node-dir": "~0.1.2",
-    "mkdirp": "~0.3.5"
+    "mkdirp": "~0.3.5",
+    "replacestream": "~0.0.6"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

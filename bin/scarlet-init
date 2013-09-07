@@ -4,10 +4,10 @@ var fs = require('fs');
 var path = require('path');
 var assert = require('assert');
 var prompt = require('prompt');
-var program = require('commander');
 var Scarlet = require('scarlet');
-var scarletInit = require('../lib/scarlet-init');
+var program = require('commander');
 var init = require('init-package-json');
+var scarletInit = require('../lib/scarlet-init');
 var version = require('../package.json').version;
 
 var scarlet = new Scarlet('scarlet-log4js');
