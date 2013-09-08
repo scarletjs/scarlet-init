@@ -9,9 +9,9 @@ if(package.repository){
 }
 
 package.peerDependencies = {
-    "scarlet": "~0.5.11"
-};
+    "scarlet" : config.get('scarletVersion')
+}
 
 package.devDependencies = {
-    "scarlet": "~0.5.11"
+    "scarlet" : config.get('scarletVersion')
 };

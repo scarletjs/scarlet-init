@@ -59,17 +59,41 @@ prompt.get(property, function(err, result) {
 	// * `filename` path to the package.json file
 	// * `basename` the tip of the package dir
 	// * `dirname` the parent of the package dir
+	getLatestDependencies(function(dependentVersions){
 
-	init(dir, initFile, configData, function (er, data) {
-		if(er){
-			logger.error("Error in creating package:"+err);
-			return;
-		}
+		configData.scarletVersion = dependentVersions.scarlet;
 
-		if(data)
-			scarletInit.writeTemplate(data,template);
+		init(dir, initFile, configData, function (er, data) {
+
+			if(er){
+				logger.error("Error in creating package:"+err);
+				return;
+			}
+
+			if(data)
+				scarletInit.writeTemplate(data,template);
+		});
 	});
+
 });
+
+var getLatestDependencies =  function(onDependencyVersion){
+    var npmconf = require('npmconf');
+    var RegClient = require('npm-registry-client');
+    npmconf.defaults.loglevel = "silent";
+
+    var client = new RegClient(npmconf.defaults);
+    client.log.level = "silent";
+
+    client.get("scarlet", "latest", 1000, function (er, data, raw, res) {
+      // error is an error if there was a problem.
+      // data is the parsed data object
+      // raw is the json string
+      // res is the response from couch
+      onDependencyVersion({scarlet:  "~"+data["dist-tags"].latest});
+    });
+
+};
 
 var enableVerboseOutput = function(){
 	logger.info("About to start creating scaffolding...");
@@ -81,5 +105,11 @@ var enableVerboseOutput = function(){
 				logger.info("Completed writing "+invocation.args[1]+" template to :"+process.cwd());
 			}).on('error', function(error){
 				logger.error("Error in writing template:"+error.message);
-			})
+			});
+
+	getLatestDependencies = scarlet.intercept(getLatestDependencies).on('before',function(invocation){
+		logger.info("Getting latest scarlet version");
+	}).on('error', function(invocation){
+		logger.error("Error in getting latest scarlet version from npm")
+	}).resolve();
 }

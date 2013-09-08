@@ -9,8 +9,8 @@ if(package.repository){
 }
 
 package.peerDependencies = {
-    "scarlet": "~0.5.11"
-};
+    "scarlet" : config.get('scarletVersion')
+}
 
 package.devDependencies = {
 	"mocha": "*",
@@ -19,7 +19,7 @@ package.devDependencies = {
     "grunt-contrib-jshint": "~0.4.3",
     "grunt-contrib-watch": "~0.4.0",
     "grunt-release": "~0.3.3",
-    "scarlet": "~0.5.11"
+    "scarlet" : config.get('scarletVersion')
 };
 
 package.directories = {
