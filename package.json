@@ -1,6 +1,6 @@
 {
   "name": "scarlet-init",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Scarlet-init is a scaffolding tool used to automate Scarlet plugin creation.",
   "author": "Tim Chaplin <tim.chaplin@ticktockdevelopment.com>",
   "homepage": "https://github.com/scarletjs/scarlet-init.git",
