@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     jshint: {
       files: ['Gruntfile.js', 'index.js', 'lib/**/*.js','tests/**/*.js'],
       options: {
-        ignores: ['lib/templates/**/*.js'],
+        ignores: ['lib/templates/**/*.js','tests/bin/expected/**/*.js'],
         globals: {
           console: true,
           module: true
