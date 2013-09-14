@@ -1,0 +1,28 @@
+{
+  "peerDependencies": {
+    "scarlet": "~0.5.11"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.4.3",
+    "scarlet": "~0.5.11"
+  },
+  "directories": {
+    "test": "tests",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec tests/*"
+  },
+  "keywords": [
+    "scarlet-plugin",
+    "plugin",
+    "scarlet"
+  ],
+  "name": "grunt-mocha",
+  "license": "MIT",
+  "version": "0.0.0",
+  "description": "Awesome Scarlet Plugin",
+  "author": ""
+}

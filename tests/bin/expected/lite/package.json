@@ -1,0 +1,12 @@
+{
+  "peerDependencies": {
+    "scarlet": "~0.5.11"
+  },
+  "devDependencies": {
+    "scarlet": "~0.5.11"
+  },
+  "name": "lite",
+  "license": "MIT",
+  "version": "0.0.0",
+  "description": "Awesome Scarlet Plugin"
+}

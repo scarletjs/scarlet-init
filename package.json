@@ -7,7 +7,7 @@
   "bin": "bin/scarlet-init",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --report spec tests/*"
+    "test": "mocha --reporter spec tests/*"
   },
   "repository": {
     "type": "git",
@@ -39,6 +39,7 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-contrib-jshint": "~0.6.4",
     "mocha": "~1.12.1",
-    "should": "~1.2.2"
+    "rimraf": "~2.2.2",
+    "through": "~2.3.4"
   }
 }

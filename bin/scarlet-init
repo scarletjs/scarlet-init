@@ -18,7 +18,7 @@ var logger = scarletLog4js.getLogger("scarlet-init");
 program
 	.version(version)
 	.usage('<indexFileToConvert>')
-	.option('-t, --template [lite|grunt-mocha|full]', 'Template to use. Default is grunt-mocha.')
+	.option('-t, --template [grunt-mocha|full|lite]', 'Template to use. Default is grunt-mocha.')
 	.parse(process.argv);
 
 prompt.message ='';
