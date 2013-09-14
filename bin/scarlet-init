@@ -82,13 +82,13 @@ prompt.get(property, function(err, result) {
 });
 
 var getLatestDependencies =  function(onDependencyVersion){
-    var npmconf = require('npmconf');
-    var RegClient = require('npm-registry-client');
-    npmconf.defaults.loglevel = "silent";
+	onDependencyVersion({scarlet:  "~"+defaultScarletVersion});
+    // var npmconf = require('npmconf');
+    // var RegClient = require('npm-registry-client');
+    // npmconf.defaults.loglevel = "silent";
 
-    var client = new RegClient(npmconf.defaults);
-    client.log.level = "silent";
-    onDependencyVersion({scarlet:  "~"+defaultScarletVersion});
+    // var client = new RegClient(npmconf.defaults);
+    // client.log.level = "silent";
  //    try{
 	//     client.get("scarlet",1000, false, false, function (er, data, raw, res) {
 	//       // error is an error if there was a problem.
