@@ -4,7 +4,7 @@ var assert = require('assert');
 var rimraf = require('rimraf');
 var through = require('through');
 var exec = require('child_process').exec;
-require('longjohn');
+
 var testDirectory = 'tests/bin/temp/';
 var COMMAND = '../../../../bin/scarlet-init';
 
@@ -34,13 +34,21 @@ var testFixture = module.exports = exports= function(commandOptions, templateNam
 				onTested();
 		});
 	});
+	execCommand.on('error', function (err) {
+		console.log("error");
+	  console.log(err);
+	});
+	execCommand.on('uncaughtException', function (err) {
+		console.log("uncaughtException");
+	  console.log(err);
+	});
 
-	execCommand.stdout.on('data',function(){
+	execCommand.stdout.pipe(through(function(data){
 		process.nextTick(function(){
 			execCommand.stdin.write('\n');
 		});
-		// process.nextTick(function(){
-		// 	execCommand.stdin.write('\n');
-		// });
-	});
+		process.nextTick(function(){
+			execCommand.stdin.write('\n');
+		});
+	}));
 };
