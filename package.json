@@ -40,6 +40,7 @@
     "grunt-contrib-jshint": "~0.6.4",
     "mocha": "~1.12.1",
     "rimraf": "~2.2.2",
-    "through": "~2.3.4"
+    "through": "~2.3.4",
+    "longjohn": "~0.2.1"
   }
 }

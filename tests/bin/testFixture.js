@@ -4,12 +4,9 @@ var assert = require('assert');
 var rimraf = require('rimraf');
 var through = require('through');
 var exec = require('child_process').exec;
-
+require('longjohn');
 var testDirectory = 'tests/bin/temp/';
 var COMMAND = '../../../../bin/scarlet-init';
-
-
-
 
 var testFixture = module.exports = exports= function(commandOptions, templateName, onTested){
 
