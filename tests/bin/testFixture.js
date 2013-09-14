@@ -39,8 +39,8 @@ var testFixture = module.exports = exports= function(commandOptions, templateNam
 		process.nextTick(function(){
 			execCommand.stdin.write('\n');
 		});
-		process.nextTick(function(){
-			execCommand.stdin.write('\n');
-		});
+		// process.nextTick(function(){
+		// 	execCommand.stdin.write('\n');
+		// });
 	});
 };
