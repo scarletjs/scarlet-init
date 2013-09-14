@@ -11,7 +11,7 @@ Install globally so you can run from the command line
 
 ```
 npm install scarlet-init -g
-``
+```
 
 ## Purpose/Description
 
@@ -24,6 +24,7 @@ Inspired by `grunt-init` and `npm init`
 ## Example
 
 Create a new plugin
+
 ```
 $ cd ~/newPluginDir
 $ scarlet-init

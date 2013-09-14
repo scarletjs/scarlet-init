@@ -34,14 +34,6 @@ var testFixture = module.exports = exports= function(commandOptions, templateNam
 				onTested();
 		});
 	});
-	execCommand.on('error', function (err) {
-		console.log("error");
-	  console.log(err);
-	});
-	execCommand.on('uncaughtException', function (err) {
-		console.log("uncaughtException");
-	  console.log(err);
-	});
 
 	execCommand.stdout.pipe(through(function(data){
 		process.nextTick(function(){
