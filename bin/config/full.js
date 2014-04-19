@@ -15,20 +15,20 @@ package.peerDependencies = {
 
 package.devDependencies = {
 	"mocha": "*",
-    "grunt": "~0.4.1",
-    "grunt-contrib-jshint": "~0.4.3",
-    "grunt-contrib-watch": "~0.4.0",
-    "grunt-release": "~0.3.3",
+    "grunt": "~0.4.4",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-release": "~0.7.0",
     "scarlet" : config.get('scarletVersion')
 };
 
 package.directories = {
-    "test": "tests",
+    "test": "test",
     "lib": "lib"
 };
 
 package.scripts ={
-	test : "mocha --reporter spec tests/*"
+	test : "mocha --reporter spec"
 };
 
 package.keywords = [
@@ -36,3 +36,7 @@ package.keywords = [
     "plugin",
     "scarlet"
 ];
+
+package.engines = {
+    "node": ">= 0.10.0"
+};

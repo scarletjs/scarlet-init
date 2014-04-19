@@ -15,8 +15,9 @@ package.peerDependencies = {
 
 package.devDependencies = {
 	"mocha": "*",
-    "grunt": "~0.4.4",
-    "grunt-contrib-jshint": "~0.10.0",
+    "gulp": "~3.6.1",
+    "gulp-mocha": "~0.4.1",
+    "gulp-jshint": "~1.5.3",
     "scarlet" : config.get('scarletVersion')
 };
 

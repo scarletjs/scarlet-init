@@ -6,7 +6,7 @@ var assert = require('assert');
 var prompt = require('prompt');
 var Scarlet = require('scarlet');
 var program = require('commander');
-var defaultScarletVersion = "~0.5.11";
+var defaultScarletVersion = "~2.0.20";
 var init = require('init-package-json');
 var scarletInit = require('../lib/scarlet-init');
 var version = require('../package.json').version;
@@ -18,7 +18,7 @@ var logger = scarletLog4js.getLogger("scarlet-init");
 program
 	.version(version)
 	.usage('<indexFileToConvert>')
-	.option('-t, --template [grunt-mocha|full|lite]', 'Template to use. Default is grunt-mocha.')
+	.option('-t, --template [gulp-mocha|grunt-mocha|full|lite]', 'Template to use. Default is gulp-mocha.')
 	.parse(process.argv);
 
 prompt.message ='';
@@ -36,7 +36,7 @@ prompt.get(property, function(err, result) {
 	if(result.yesno.toLowerCase() !== 'y' && result.yesno.toLowerCase() !== 'yes' && result.yesno.toLowerCase() !== '')
 		return;
 
-	var template = "grunt-mocha";
+	var template = "gulp-mocha";
 	if(program.template){
 		template = program.template;
 	}
@@ -124,5 +124,5 @@ var enableVerboseOutput = function(){
 		logger.info("Getting latest scarlet version");
 	}).on('error', function(invocation){
 		logger.error("Error in getting latest scarlet version from npm")
-	}).resolve();
+	}).proxy();
 }

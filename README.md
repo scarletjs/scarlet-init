@@ -43,8 +43,9 @@ $ scarlet-init -h
 
 ## Templates
 
-Currently there are two templates:
-* grunt-mocha|default - Gives you a scarlet plugin project with: grunt, grunt-contrib-jshint, mocha ,scarlet, lib and test directories, and package.json
+Currently supports the following templates:
+* gulp-mocha|default - Gives you a scarlet plugin project with: gulp, gulp-jshint, gulp-mocha ,scarlet, lib and test directories, and package.json
+* grunt-mocha - Gives you a scarlet plugin project with: grunt, grunt-contrib-jshint, mocha ,scarlet, lib and test directories, and package.json
 * full - Gives you a scarlet plugin project with: grunt, grunt-contrib-jshint, grunt-release, grunt-contrib-watch, mocha, scarlet, lib and test directories, and package.json
 * lite - Gives you a scarlet plugin project with: index.js, package.json
 
